@@ -49,4 +49,10 @@ class _AnimateTimerState extends State<AnimateTimer>
       percentageFill: _animation.value,
     );
   }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 }

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               size: 50,
               color: Colors.blue,
               animationDuration: 20,
-              animationBehaviorPreserve: false,
+              animationBehaviorPreserve: true,
             ),
           )),
     );
