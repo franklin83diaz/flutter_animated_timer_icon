@@ -2,6 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+/// This is a custom render box that draws a circle with a percentage fill.
+/// The circle is drawn with a border and a button, to draw a stopwatch-like icon.
+/// The percentage fill is drawn as an arc.
+///
+/// The render box is used in the TimerIconWidget to draw the timer icon.
+/// This Class has setters for the sideLength, color, and percentageFill.
+///
 class CustomRenderBox extends RenderBox {
   double _sideLength;
   Color _color;
@@ -13,6 +20,7 @@ class CustomRenderBox extends RenderBox {
     required percentageFill,
   })  : _sideLength = sideLength,
         _color = color,
+        //If the percentage fill is not between 0 and 1, throw an error
         assert(percentageFill >= 0 && percentageFill <= 1),
         _percentageFill = percentageFill;
 
@@ -54,8 +62,8 @@ class CustomRenderBox extends RenderBox {
     context.canvas.drawArc(
       Rect.fromCenter(
           center: size.center(offset),
-          width: size.width - 10,
-          height: size.height - 10),
+          width: size.width * 0.90 - 2,
+          height: size.height * 0.90 - 2),
       -pi / 2, // Start angle (90°)
       angle, // angle fill
       true, // fill
