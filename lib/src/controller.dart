@@ -2,15 +2,6 @@
 import 'package:flutter/material.dart';
 
 class AnimateTimerController {
-  static final AnimateTimerController _controller =
-      AnimateTimerController._internal();
-
-  factory AnimateTimerController() {
-    return _controller;
-  }
-
-  AnimateTimerController._internal();
-
   late AnimationController _animationController;
 
   void setTimerIconController(AnimationController c) {

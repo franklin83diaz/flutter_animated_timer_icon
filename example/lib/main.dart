@@ -12,12 +12,14 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var animateTimerController = AnimateTimerController();
+  var animateTimerController2 = AnimateTimerController();
   TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
             title: const Text('Material App Bar'),
@@ -51,6 +53,40 @@ class _MyAppState extends State<MyApp> {
                           animateTimerController.restart();
                         },
                         child: const Text('Submit')),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Center(
+                      child: AnimateTimer(
+                        animateTimerController: animateTimerController2,
+                        size: 200,
+                        color: Colors.blue,
+                        animationDuration: 10,
+                        animationBehaviorPreserve: true,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      children: [
+                        TextButton(
+                            onPressed: () {
+                              animateTimerController2.restart();
+                            },
+                            child: const Text('Restart')),
+                        TextButton(
+                            onPressed: () {
+                              animateTimerController2.start();
+                            },
+                            child: const Text('Start')),
+                        TextButton(
+                            onPressed: () {
+                              animateTimerController2.stop();
+                            },
+                            child: const Text('Stop')),
+                      ],
+                    )
                   ],
                 ),
               ),
