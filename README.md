@@ -1,4 +1,4 @@
-![image](example/lib/src/img/v.png)
+![image](https://raw.githubusercontent.com/franklin83diaz/flutter_animated_timer_icon/main/example/lib/src/img/v.png)
 
 # Flutter Animated Timer Icon
 A small widget that can be used as an icon to indicate the remaining time can be used as a suffix for a text field or a larger icon.
