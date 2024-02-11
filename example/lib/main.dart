@@ -11,8 +11,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var animateTimerController = AnimateTimerController();
-  var animateTimerController2 = AnimateTimerController();
+  final animateTimerController = AnimateTimerController();
+  final animateTimerController2 = AnimateTimerController();
   TextEditingController textEditingController = TextEditingController();
 
   @override
