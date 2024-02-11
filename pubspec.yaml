@@ -1,6 +1,6 @@
 name: flutter_animated_timer_icon
 description: "Flutter package of small icon timer that has a circular graph that shows the time consumed or remaining."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/franklin83diaz/flutter_animated_timer_icon
 
 environment:
